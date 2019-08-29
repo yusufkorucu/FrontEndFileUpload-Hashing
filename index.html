@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+
+       
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+            /* Hide default HTML checkbox */
+            .switch input {
+                display: none;
+            }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+    </style>
+    <div style="margin-top:40px;" class="container">
+       <div>
+           <h1 style="margin-left:200px;" > File Hashing and Response Time </h1>
+</div>
+
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div  class="form-group">
+                            <label  for="document">File Upload</label>
+                            <input   type="file" id="document" class="btn btn-primary" accept='*' placeholder="Select file" />
+                        </div>
+                        <div class="form-group">
+                            <label for="chunkSize">Chunk size in bytes</label>
+                            <input type="text" id="chunkSize" class="form-control" value="1048576" />
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4">
+                                
+                            </div>
+                         
+                             <div class="col-2">
+                                <label class="switch">
+                                    
+                                </label>  
+                                </div>
+
+                            <div class="col-4">
+                               
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hash">Hash</label>
+                            <input type="text" id="hash" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="fileSize">File size</label>
+                            <input type="text" id="fileSize" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="timeStart">Time Start</label>
+                            <input type="text" id="timeStart" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="timeEnd">Time End</label>
+                            <input type="text" id="timeEnd" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="timeDelta">Response Time(Second) </label>
+                            <input type="text" id="timeDelta" class="form-control" />
+                        </div>
+
+
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
+
+    <script src="crypto-js.js"></script>
+    <script src="./index.js"></script>
+    
+</body>
+
+
+</html>
